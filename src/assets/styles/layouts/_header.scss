@@ -1,71 +1,82 @@
-/*body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
 }
-*/
+
+body {
+  // display: flex;
+  // flex-direction: column;
+  // height: 100vh;
+  margin: 0;
+  // padding: 20px;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $uoc-bg;
+  color: $uoc-corporate;
+}
+
 .container {
-  max-width: 1200px; 
+  max-width: $maxWidth; 
   margin: 0 auto;
   padding: 0 20px;
+  // @media (min-width: $mqMinWidth) {
+  //   max-width: none;
+  // }
 }
 
 header {
   background-color: #333;
   color: white;
   padding: 10px 0;
-}
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.logo {
-  font-size: 1.5em;
-}
-//https://www.recetasgratis.net/
+  .logo {
+    font-size: 1.5em;
+  }
 
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5em;
-  cursor: pointer;
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    // @media (min-width: $mqMinWidth) {
+    //   display: block;
+    // }
+  }
 }
 
 nav {
   display: flex;
   justify-content: end;
-}
+  ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+  }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  justify-content: space-around;
-}
+  li {
+    margin-left: 20px;
+  }
 
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-h1 {
-  color: #333;
-}
-
-h2 {
-  color: #555;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: $menu-hover;
+    border-radius: 5px;
+    color: red;
+    padding: 10px;
+  }
 }
 
 ul {
@@ -74,29 +85,51 @@ ul {
 }
 
 li {
-  background-color: #eee;
+  // background-color: #eee;
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+// Recordatorio
+// Max Width es Igual o menor 
+// Min Width es igual o Mayor
+
+@media (max-width: $mqMaxWidth) {
+  .container{
+    max-width: none;
   }
 
+  header {    
+    .container-header {
+      // flex-direction: column;
+      align-items: flex-start;
+      
+    }
+  
+    .logo {
+      margin: 10px 0;
+    }
+
+    .menu-toggle {
+      display: block;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+  }
+  
   nav {
     display: none;
     flex-direction: column;
-    width: 100%;
-  }
+    width: auto;
+    ul {
+      flex-direction: column;
+    }
 
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
+    li {
+      margin: 10px 0;
+    }    
   }
 
   nav.active {
