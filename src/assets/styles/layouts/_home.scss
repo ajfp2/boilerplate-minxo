@@ -3,9 +3,9 @@
 .uoc-container {
   max-width: $maxWidth;
   margin: 1rem auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  text-align: justify;
   background-color: #fff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -35,12 +35,13 @@
   }
 }
 
-.image-recipe {
+.imagen-receta {
   display: block;
   margin: 1.5rem auto;
-  max-width: $maxWidth;
   height: auto;
   border-radius: 10px;
+  max-width: 350px;
+  height: auto;
 
   @media (min-width: $mqMinWidth) {
     max-width: none;
@@ -54,22 +55,20 @@
 }
 
 
-// h1 {
-//   color: #333;
-// }
-
-// h2 {
-//   color: #555;
-// }
-
-// ul {
-//   list-style-type: none;
-//   padding: 0;
-// }
-
-// li {
-//   background-color: #eee;
-//   margin: 5px 0;
-//   padding: 10px;
-//   border-radius: 5px;
-// }
+.list-ingredientes {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    background-color: #eee;
+    margin: 5px;
+    padding: 10px;
+    text-align: start;
+    border-radius: 5px;
+    flex: 1 1 calc(50% - 10px);
+    @media (max-width: $mqMaxWidth) {
+      flex: 1 1 100%;
+    }
+  }
+}

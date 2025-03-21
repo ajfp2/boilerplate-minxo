@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/x-icon" href="./assets/images/horno.png">
         <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
         <title>Minxo Callosa</title>
     </head>
@@ -13,17 +14,27 @@
         
         <picture>
             <source srcset="./assets/images/minxo.jpg?as=webp&width=650" type="image/webp" />
-            <img src="./assets/images/minxo.jpg?width=650" alt="Minxo Callosa" class="image-recipe" />
+            <img src="./assets/images/minxo.jpg?width=650" alt="Minxo Callosa" class="imagen-receta" />
         </picture>
-        <h1 class="uoc-title"><i class="fas fa-utensils"></i> Recetas de Cocina</h1>
-        <p>
-            This is a starter template for the Advanced HTML and CSS Tools courses
-            from the Master's Program in Multimedia Applications and the Master's
-            Program in Web App and Website Development at the Universitat Oberta de
-            Catalunya. ESPAÑA
-        </p>
+        
+        
+        <div id="recipe-container" class="uoc-container">
+            <h1 class="uoc-title"><i class="fa fa-shopping-basket"></i> Ingredientes</h1>
+        </div>
+        <div class="uoc-container" id="preparacion-receta">
+            <h1 class="uoc-title"><i class="fa fa-hands"></i> Preparaci&oacute;n de la Receta</h1>
+            <p>En primer lugar, en una cazuela honda vertemos 7 vasos de agua, 1 vaso de aceite de oliva y un poquito de sal. A continuación, lo ponemos al fuego y dejamos que hierva.</p>
+            <p>Mientras hierve, pelamos y troceamos las verduras en rodajas. Reservamos para después.</p>
+            <p>A continuación, preparamos la masa. En un bol grande echamos la harina y poco a poco vertemos el agua que hemos hervido sin dejar de remover. Nos ponemos un poquito de aceite de oliva en las manos y amasamos hasta que quede una masa homogénea y sin grumos.</p>
+            <p>Una vez lista la masa, formamos las bolas para preparar los minxos. Ponemos las bolas sobre un papel de horno, alargamos y estiramos con las manos hasta que quede completamente plana. Cuando terminemos hacemos los bordes.</p>
+            <p>Salamos las verduras y las ponemos por encima de la masa. A continuación, ponemos los calamares y por último la pescadilla. Añadimos un buen chorro de aceite de oliva y horneamos a 200ºC durante 15 minutos.</p>
+            <p>Pasado ese tiempo, comprobamos que el minxo esté doradito y lo sacamos del horno. Emplatamos y acompañamos con salsa ali oli.</p>
+            <p>Y a quien le guste, acompañarlo de un buen alioli casero.</p>
+            <p>Receta realizada por mi amiga Sandra y publicada en Canal Cocina, pueden verla <a href="https://canalcocina.es/receta/minxo-destapt-1">aqu&iacute;</a></p>
+        </div>
+        
     </div>
-    <div id="recipe-container"></div>
+    
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

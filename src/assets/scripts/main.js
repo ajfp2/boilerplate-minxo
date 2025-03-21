@@ -23,14 +23,18 @@ menuToggle.addEventListener('click', () => {
 });
 
 const recipes = [
-  { name: 'Paella', ingredients: ['Arroz', 'Mariscos', 'Azafrán'] },
-  { name: 'Tortilla de Patatas', ingredients: ['Patatas', 'Huevos', 'Cebolla'] },
+  { name: 'Principales', 
+    ingredients: ['Harina de trigo', 'Agua', 'AOVE', 'Sal', '1 tomate', '3 champiñones', '1 berenjena', '1 tomate en salmuera', '4 Sepionets (calamares pequeños)', '1 pescadilla pequeña']
+  },
+  { name: 'Opcionales',
+    ingredients: ['1 Alcachofa', '1 patata', '1 pimiento en salmuera', 'Alioli']
+  },
 ];
 
 const container = document.getElementById('recipe-container');
 
 recipes.forEach(recipe => {
   const recipeDiv = document.createElement('div');
-  recipeDiv.innerHTML = `<h2>${recipe.name}</h2><ul>${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}</ul>`;
+  recipeDiv.innerHTML = `<h3>${recipe.name}</h3><ul class='list-ingredientes'>${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}</ul>`;
   container.appendChild(recipeDiv);
 });
