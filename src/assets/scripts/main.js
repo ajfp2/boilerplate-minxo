@@ -32,7 +32,7 @@ const recipes = [
 ];
 
 const container = document.getElementById('recipe-container');
-
+//https://programadorwebvalencia.com/boton-para-volver-arriba-animado-o-scroll-suave/ volver arruiba
 recipes.forEach(recipe => {
   const recipeDiv = document.createElement('div');
   recipeDiv.innerHTML = `<h3>${recipe.name}</h3><ul class='list-ingredientes'>${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}</ul>`;
