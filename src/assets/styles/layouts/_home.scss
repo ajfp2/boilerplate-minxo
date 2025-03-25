@@ -3,7 +3,7 @@
 .uoc-container {
   max-width: $maxWidth;
   margin: 1rem auto;
-  padding: 1.5rem;
+  padding: 1.1rem;
   border-radius: 1.5rem;
   text-align: justify;
   background-color: #fff;
@@ -35,7 +35,7 @@
   }
 }
 
-.imagen-receta {
+.image-recipe {
   display: block;
   margin: 1.5rem auto;
   height: auto;
@@ -48,14 +48,7 @@
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
-}
-
-
-.list-ingredientes {
+.list-ingredients {
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -73,14 +66,14 @@
   }
 }
 
-.girdCardRecetas {
+.girdCardRecipes {
   display: flex;
   flex-wrap:wrap;
 }
 
 .card {
   width: 100%;
-  margin: 10px;
+  margin-bottom: 10px;
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -88,6 +81,7 @@
   overflow: hidden;
   @media (min-width: $mqMaxWidth) {    
     width:calc(93% / 3);
+    margin: 10px;
   }
 }
 .card figure{
@@ -109,4 +103,52 @@
   margin: 0 0 15px 0;
   font-size: 1.7em;
   line-height: normal;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info {
+  flex: 1;
+}
+
+.footer-button {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer button:hover {
+  background-color: #777;
+}
+
+@media (max-width: 768px) {
+.footer-content {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-button {
+  justify-content: flex-start;
+  margin-top: 10px;
+}
 }
