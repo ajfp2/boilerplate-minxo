@@ -3,30 +3,24 @@
 }
 
 body {
-  // display: flex;
-  // flex-direction: column;
-  // height: 100vh;
-  margin: 0;
-  // padding: 20px;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
   background-color: $uoc-bg;
   color: $uoc-corporate;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   max-width: $maxWidth; 
   margin: 0 auto;
   padding: 0 15px;
-  // @media (min-width: $mqMinWidth) {
-  //   max-width: none;
-  // }
 }
 
 header {
-  background-color: #333;
-  color: white;
+  background-color: $uoc-header;
+  color: $blanco;
   padding: 10px 0;
 
   .container-header {
@@ -46,9 +40,7 @@ header {
     color: white;
     font-size: 1.5em;
     cursor: pointer;
-    // @media (min-width: $mqMinWidth) {
-    //   display: block;
-    // }
+
   }
 }
 
@@ -74,7 +66,7 @@ nav {
   a:hover {
     background-color: $menu-hover;
     border-radius: 5px;
-    color: red;
+    color: $text-hover;
     padding: 10px;
   }
 }

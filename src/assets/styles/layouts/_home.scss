@@ -3,12 +3,11 @@
 .uoc-container {
   max-width: $maxWidth;
   margin: 1rem auto;
-  padding: 1.1rem;
+  padding: 1rem;
   border-radius: 1.5rem;
   text-align: justify;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: $blanco;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .uoc-logo {
@@ -16,36 +15,50 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5rem;
-  max-width: 200px;
+  max-width: none;
   height: auto;
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+  @media (max-width: $mqMinWidth) {
+    
+    max-width: 200px;
+  }
+}
+
+%title-shared {
+  font-family: $font-family-serif;
+  
+  font-size: 36px;
+  
+  color: $uoc-corporate;
+  @media (max-width: $mqMinWidth) {
+    font-size: 24px;
+    font-weight: 700;
   }
 }
 
 .uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+  @extend %title-shared;  
+}
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+.title {
+  @extend %title-shared;
+  text-align: center;
+  margin: 30px auto;
+  @media (max-width: $mqMinWidth) {
+    margin: 15px auto;
   }
 }
 
 .image-recipe {
   display: block;
   margin: 1.5rem auto;
-  height: auto;
   border-radius: 10px;
-  max-width: 350px;
+  max-width: 100%;
   height: auto;
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
+  // @media (min-width: $mqMinWidth) {
+  //   max-width: 100%;
+  // }
 }
 
 .list-ingredients {
@@ -62,6 +75,7 @@
     flex: 1 1 calc(50% - 10px);
     @media (max-width: $mqMaxWidth) {
       flex: 1 1 100%;
+     
     }
   }
 }
@@ -72,16 +86,16 @@
 }
 
 .card {
-  width: 100%;
-  margin-bottom: 10px;
+  width:calc(93% / 3);
+    margin: 10px;
   border-radius: 15px;
   background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   overflow: hidden;
-  @media (min-width: $mqMaxWidth) {    
-    width:calc(93% / 3);
-    margin: 10px;
+  @media (max-width: $mqMaxWidth) {
+    width: 100%;
+    margin-bottom: 10px;   
+    
   }
 }
 .card figure{
@@ -103,52 +117,4 @@
   margin: 0 0 15px 0;
   font-size: 1.7em;
   line-height: normal;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-info {
-  flex: 1;
-}
-
-.footer-button {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-footer button {
-  background-color: #555;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-footer button:hover {
-  background-color: #777;
-}
-
-@media (max-width: 768px) {
-.footer-content {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.footer-button {
-  justify-content: flex-start;
-  margin-top: 10px;
-}
 }
