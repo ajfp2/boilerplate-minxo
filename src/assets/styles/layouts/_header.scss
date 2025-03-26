@@ -18,36 +18,35 @@ body {
   padding: 0 15px;
 }
 
-header {
+.header {
   background-color: $uoc-header;
   color: $blanco;
   padding: 10px 0;
 
-  .container-header {
+  &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .logo {
+  &__logo {
     font-size: 1.5em;
   }
 
-  .menu-toggle {
+  &__menuToggle {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: $blanco;
     font-size: 1.5em;
     cursor: pointer;
-
   }
 }
 
-nav {
+.navbar {
   display: flex;
   justify-content: end;
-  ul {
+  &__list {
     list-style-type: none;
     display: flex;
     margin: 0;
@@ -55,32 +54,22 @@ nav {
     justify-content: space-around;
   }
 
-  li {
+  &__item {
+    margin-top: 5px;
     margin-left: 20px;
+    padding: 10px;
   }
 
-  a {
-    color: white;
+  &__link {
+    color: $blanco;
     text-decoration: none;
   }
-  a:hover {
+  &__link:hover {
     background-color: $menu-hover;
     border-radius: 5px;
     color: $text-hover;
     padding: 10px;
   }
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  // background-color: #eee;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 // Recordatorio
@@ -92,39 +81,38 @@ li {
     max-width: none;
   }
 
-  header {    
-    .container-header {
+  .header {    
+    &__container {
       // flex-direction: column;
       align-items: flex-start;
       
     }
   
-    .logo {
+    &__logo {
       margin: 10px 0;
     }
 
-    .menu-toggle {
+    &__menuToggle {
       display: block;
       align-items: center;
       margin: 10px 0;
     }
-
   }
   
-  nav {
+  .navbar {
     display: none;
     flex-direction: column;
     width: auto;
-    ul {
+    &__list {
       flex-direction: column;
     }
 
-    li {
+    &__item {
       margin: 10px 0;
-    }    
-  }
+    }
 
-  nav.active {
-    display: flex;
+    &--active {
+      display: flex;
+    }
   }
 }

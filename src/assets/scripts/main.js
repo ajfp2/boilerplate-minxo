@@ -10,16 +10,16 @@
  * Write any other JavaScript below
  */
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
+// +( function() {
+//   const university = "UOC";
+//   console.log(`Hello, ${university}!`);
+// } )();
 
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+const menuToggle = document.querySelector('.header__menuToggle');
+const nav = document.querySelector('.navbar');
 
 menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('active');
+  nav.classList.toggle('navbar--active');
 });
 
 const recipes = [
@@ -35,7 +35,7 @@ const container = document.getElementById('recipe-container');
 
 recipes.forEach(recipe => {
   const recipeDiv = document.createElement('div');
-  recipeDiv.innerHTML = `<h3>${recipe.name}</h3><ul class='list-ingredients'>${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}</ul>`;
+  recipeDiv.innerHTML = `<h3>${recipe.name}</h3><ul class='list-ingredients'>${recipe.ingredients.map(ing => `<li class='list-ingredients__items'>${ing}</li>`).join('')}</ul>`;
   container.appendChild(recipeDiv);
 });
 

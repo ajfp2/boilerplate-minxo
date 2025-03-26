@@ -17,18 +17,14 @@
   margin-bottom: 1.5rem;
   max-width: none;
   height: auto;
-
-  @media (max-width: $mqMinWidth) {
-    
+  @media (max-width: $mqMinWidth) {    
     max-width: 200px;
   }
 }
 
 %title-shared {
-  font-family: $font-family-serif;
-  
-  font-size: 36px;
-  
+  font-family: $font-family-serif;  
+  font-size: 36px;  
   color: $uoc-corporate;
   @media (max-width: $mqMinWidth) {
     font-size: 24px;
@@ -55,10 +51,6 @@
   border-radius: 10px;
   max-width: 100%;
   height: auto;
-
-  // @media (min-width: $mqMinWidth) {
-  //   max-width: 100%;
-  // }
 }
 
 .list-ingredients {
@@ -66,7 +58,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  li {
+  &__items {
     background-color: #eee;
     margin: 5px;
     padding: 10px;
@@ -74,47 +66,48 @@
     border-radius: 5px;
     flex: 1 1 calc(50% - 10px);
     @media (max-width: $mqMaxWidth) {
-      flex: 1 1 100%;
-     
+      flex: 1 1 100%;     
     }
   }
 }
 
-.girdCardRecipes {
+.gird-card-recipes {
   display: flex;
   flex-wrap:wrap;
 }
 
 .card {
   width:calc(93% / 3);
-    margin: 10px;
+  margin: 10px;
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   overflow: hidden;
+
+  &__figure-card{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  &__img-card {
+    max-width: 100%;
+    transform-origin: center;
+  }
+  
+  &__body-card{
+    padding: 15px;
+  }
+  
+  &__title-card {
+    margin-bottom: 15px;
+    font-size: 1.7em;
+    line-height: normal;
+  }
+
   @media (max-width: $mqMaxWidth) {
     width: 100%;
-    margin-bottom: 10px;   
-    
+    margin: 0;
+    margin-bottom: 10px;       
   }
-}
-.card figure{
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.card img {
-  max-width: 100%;
-  transform-origin: center;
-}
-
-.card-body{
-  padding: 15px;
-}
-
-.card-body h2 {
-  margin: 0 0 15px 0;
-  font-size: 1.7em;
-  line-height: normal;
 }
